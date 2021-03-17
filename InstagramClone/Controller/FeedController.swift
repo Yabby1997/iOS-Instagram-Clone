@@ -33,7 +33,6 @@ extension FeedController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! FeedCell
-        cell.backgroundColor = .red
         
         return cell
     }
@@ -42,6 +41,11 @@ extension FeedController {
 // MARK: -
 extension FeedController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: 200)
+        
+        let width = view.frame.width
+        var height = width + 8  + 40  + 8
+        height += 110
+        
+        return CGSize(width: width, height: height)
     }
 }
