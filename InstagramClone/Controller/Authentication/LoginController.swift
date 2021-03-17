@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginController: UIViewController {
+class LoginController: UIViewController, FormViewModel {
     // MARK: - Properties
     private var viewModel = LoginViewModel()
     
@@ -99,6 +99,7 @@ class LoginController: UIViewController {
         navigationController?.pushViewController(controller, animated: true)
     }
     
+    // MARK: - Observer Methods
     func configureNotificationObserver() {
         emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
         passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
@@ -110,9 +111,14 @@ class LoginController: UIViewController {
         } else if sender == passwordTextField {
             viewModel.password = sender.text
         }
-        
+        updateForm()
+    }
+    
+    // MARK: - FormViewModel Methods
+    func updateForm() {
         loginButton.isEnabled = viewModel.formIsValid
         loginButton.backgroundColor = viewModel.buttonBackgroundColor
         loginButton.setTitleColor(viewModel.buttonTitleColor, for: .normal)
     }
+    
 }
