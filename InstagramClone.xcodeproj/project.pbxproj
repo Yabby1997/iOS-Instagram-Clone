@@ -15,6 +15,8 @@
 		1D6ED51F2601BC6B00CE7266 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6ED51E2601BC6B00CE7266 /* ProfileController.swift */; };
 		1D6ED5232601C9AA00CE7266 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6ED5222601C9AA00CE7266 /* FeedCell.swift */; };
 		1D6ED5262601CAE000CE7266 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6ED5252601CAE000CE7266 /* Extensions.swift */; };
+		1D6ED52A2601E2F000CE7266 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6ED5292601E2F000CE7266 /* LoginController.swift */; };
+		1D6ED52E2601E2F700CE7266 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6ED52D2601E2F700CE7266 /* RegistrationController.swift */; };
 		1D8B68C12601B74300EF6F8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8B68C02601B74300EF6F8F /* AppDelegate.swift */; };
 		1D8B68C32601B74300EF6F8F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8B68C22601B74300EF6F8F /* SceneDelegate.swift */; };
 		1D8B68C52601B74300EF6F8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8B68C42601B74300EF6F8F /* ViewController.swift */; };
@@ -32,6 +34,8 @@
 		1D6ED51E2601BC6B00CE7266 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		1D6ED5222601C9AA00CE7266 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		1D6ED5252601CAE000CE7266 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		1D6ED5292601E2F000CE7266 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		1D6ED52D2601E2F700CE7266 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		1D8B68BD2601B74300EF6F8F /* InstagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D8B68C02601B74300EF6F8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D8B68C22601B74300EF6F8F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +60,7 @@
 		1D6ED5082601B83200CE7266 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1D6ED5282601E2E300CE7266 /* Authentication */,
 				1D6ED50F2601B98300CE7266 /* MainTabController.swift */,
 				1D6ED5122601BC3800CE7266 /* FeedController.swift */,
 				1D6ED5152601BC4A00CE7266 /* SearchController.swift */,
@@ -101,6 +106,15 @@
 				1D6ED5252601CAE000CE7266 /* Extensions.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		1D6ED5282601E2E300CE7266 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				1D6ED5292601E2F000CE7266 /* LoginController.swift */,
+				1D6ED52D2601E2F700CE7266 /* RegistrationController.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 		1D8B68B42601B74300EF6F8F = {
@@ -210,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D6ED51C2601BC5E00CE7266 /* ImageSelectorController.swift in Sources */,
+				1D6ED52A2601E2F000CE7266 /* LoginController.swift in Sources */,
 				1D6ED5232601C9AA00CE7266 /* FeedCell.swift in Sources */,
 				1D8B68C52601B74300EF6F8F /* ViewController.swift in Sources */,
 				1D6ED5162601BC4A00CE7266 /* SearchController.swift in Sources */,
@@ -220,6 +235,7 @@
 				1D6ED5102601B98300CE7266 /* MainTabController.swift in Sources */,
 				1D6ED5262601CAE000CE7266 /* Extensions.swift in Sources */,
 				1D8B68C32601B74300EF6F8F /* SceneDelegate.swift in Sources */,
+				1D6ED52E2601E2F700CE7266 /* RegistrationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
