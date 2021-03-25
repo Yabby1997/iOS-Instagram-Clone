@@ -9,12 +9,18 @@ import UIKit
 
 class ProfileCell: UICollectionViewCell {
     // MARK: - Properties
+    private let postImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = #imageLiteral(resourceName: "venom-7")
+        imageView.contentMode = .scaleAspectFill
+        return imageView
+    }()
     
     // MARK: - Lifecycle
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        backgroundColor = .lightGray
+        configureViewController()
     }
     
     required init?(coder: NSCoder) {
@@ -22,5 +28,8 @@ class ProfileCell: UICollectionViewCell {
     }
     
     // MARK: - Helpers
-    
+    func configureViewController() {
+        addSubview(postImageView)
+        postImageView.fillSuperview()
+    }
 }
