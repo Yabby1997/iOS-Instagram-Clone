@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1D6877D8260AEABE008DD218 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6877D7260AEABE008DD218 /* ImageUploader.swift */; };
 		1D6877DB260AEAC6008DD218 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6877DA260AEAC6008DD218 /* AuthService.swift */; };
+		1D6877DF260C5AB2008DD218 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6877DE260C5AB2008DD218 /* ProfileCell.swift */; };
+		1D6877E2260C5ADB008DD218 /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6877E1260C5ADB008DD218 /* ProfileHeader.swift */; };
 		1D6ED5102601B98300CE7266 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6ED50F2601B98300CE7266 /* MainTabController.swift */; };
 		1D6ED5132601BC3800CE7266 /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6ED5122601BC3800CE7266 /* FeedController.swift */; };
 		1D6ED5162601BC4A00CE7266 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6ED5152601BC4A00CE7266 /* SearchController.swift */; };
@@ -35,6 +37,8 @@
 		0C12081173CED909061C33B1 /* Pods-InstagramClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramClone.release.xcconfig"; path = "Target Support Files/Pods-InstagramClone/Pods-InstagramClone.release.xcconfig"; sourceTree = "<group>"; };
 		1D6877D7260AEABE008DD218 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		1D6877DA260AEAC6008DD218 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		1D6877DE260C5AB2008DD218 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		1D6877E1260C5ADB008DD218 /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
 		1D6ED50F2601B98300CE7266 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
 		1D6ED5122601BC3800CE7266 /* FeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
 		1D6ED5152601BC4A00CE7266 /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
@@ -72,6 +76,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D6877E4260C5ADF008DD218 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				1D6877DE260C5AB2008DD218 /* ProfileCell.swift */,
+				1D6877E1260C5ADB008DD218 /* ProfileHeader.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		1D6ED5082601B83200CE7266 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +112,7 @@
 			children = (
 				1D6ED5222601C9AA00CE7266 /* FeedCell.swift */,
 				1D6ED5302601EF5F00CE7266 /* CustomTextField.swift */,
+				1D6877E4260C5ADF008DD218 /* Profile */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -308,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D6ED5312601EF5F00CE7266 /* CustomTextField.swift in Sources */,
+				1D6877E2260C5ADB008DD218 /* ProfileHeader.swift in Sources */,
 				1D6ED51C2601BC5E00CE7266 /* ImageSelectorController.swift in Sources */,
 				1D6ED52A2601E2F000CE7266 /* LoginController.swift in Sources */,
 				1D6ED5232601C9AA00CE7266 /* FeedCell.swift in Sources */,
@@ -322,6 +337,7 @@
 				1D6ED5262601CAE000CE7266 /* Extensions.swift in Sources */,
 				1D6877D8260AEABE008DD218 /* ImageUploader.swift in Sources */,
 				1D6877DB260AEAC6008DD218 /* AuthService.swift in Sources */,
+				1D6877DF260C5AB2008DD218 /* ProfileCell.swift in Sources */,
 				1D8B68C32601B74300EF6F8F /* SceneDelegate.swift in Sources */,
 				1D6ED52E2601E2F700CE7266 /* RegistrationController.swift in Sources */,
 			);
