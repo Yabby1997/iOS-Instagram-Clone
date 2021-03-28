@@ -29,6 +29,8 @@
 		1D8B68C82601B74300EF6F8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D8B68C62601B74300EF6F8F /* Main.storyboard */; };
 		1D8B68CA2601B74500EF6F8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D8B68C92601B74500EF6F8F /* Assets.xcassets */; };
 		1D8B68CD2601B74500EF6F8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D8B68CB2601B74500EF6F8F /* LaunchScreen.storyboard */; };
+		1D9DC8922610A82000A3870B /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9DC8912610A82000A3870B /* UserService.swift */; };
+		1D9DC8952610A8A100A3870B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9DC8942610A8A100A3870B /* Constants.swift */; };
 		1DB90D4B260ADF28006F4CA1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DB90D4A260ADF28006F4CA1 /* GoogleService-Info.plist */; };
 		67B388782B478547D94C44F5 /* Pods_InstagramClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E44A147E134F7A1CF060F5D /* Pods_InstagramClone.framework */; };
 /* End PBXBuildFile section */
@@ -59,6 +61,8 @@
 		1D8B68C92601B74500EF6F8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D8B68CC2601B74500EF6F8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D8B68CE2601B74500EF6F8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D9DC8912610A82000A3870B /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		1D9DC8942610A8A100A3870B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1DB90D4A260ADF28006F4CA1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2E44A147E134F7A1CF060F5D /* Pods_InstagramClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstagramClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E4445F1BAAF832C8D2C6D50 /* Pods-InstagramClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramClone.debug.xcconfig"; path = "Target Support Files/Pods-InstagramClone/Pods-InstagramClone.debug.xcconfig"; sourceTree = "<group>"; };
@@ -129,6 +133,7 @@
 			children = (
 				1D6877D7260AEABE008DD218 /* ImageUploader.swift */,
 				1D6877DA260AEAC6008DD218 /* AuthService.swift */,
+				1D9DC8912610A82000A3870B /* UserService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -137,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				1D6ED5252601CAE000CE7266 /* Extensions.swift */,
+				1D9DC8942610A8A100A3870B /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -332,11 +338,13 @@
 				1D8B68C12601B74300EF6F8F /* AppDelegate.swift in Sources */,
 				1D6ED5192601BC5100CE7266 /* NotificationsController.swift in Sources */,
 				1D6ED51F2601BC6B00CE7266 /* ProfileController.swift in Sources */,
+				1D9DC8952610A8A100A3870B /* Constants.swift in Sources */,
 				1D6ED5132601BC3800CE7266 /* FeedController.swift in Sources */,
 				1D6ED5102601B98300CE7266 /* MainTabController.swift in Sources */,
 				1D6ED5262601CAE000CE7266 /* Extensions.swift in Sources */,
 				1D6877D8260AEABE008DD218 /* ImageUploader.swift in Sources */,
 				1D6877DB260AEAC6008DD218 /* AuthService.swift in Sources */,
+				1D9DC8922610A82000A3870B /* UserService.swift in Sources */,
 				1D6877DF260C5AB2008DD218 /* ProfileCell.swift in Sources */,
 				1D8B68C32601B74300EF6F8F /* SceneDelegate.swift in Sources */,
 				1D6ED52E2601E2F700CE7266 /* RegistrationController.swift in Sources */,
