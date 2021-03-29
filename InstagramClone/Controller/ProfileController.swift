@@ -11,32 +11,31 @@ class ProfileController: UICollectionViewController {
     // MARK: - Properties
     private let cellIdentifier = "profileCell"
     private let headerIdentifier = "profileHeader"
-    var user: User? {
-        didSet { collectionView.reloadData() }
+    private var user: User
+    
+    // MARK: - LifeCycle
+    init(user: User) {
+        self.user = user
+        super.init(collectionViewLayout: UICollectionViewFlowLayout())
     }
     
-    // MARK: - View Methods
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCollectionView()
-        fetchUser()
     }
     
     // MARK: - Helpers
     func configureCollectionView() {
+        navigationItem.title = user.username
         collectionView.backgroundColor = .white
         collectionView.register(ProfileCell.self, forCellWithReuseIdentifier: cellIdentifier)
         collectionView.register(ProfileHeader.self,
                                 forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
                                 withReuseIdentifier: headerIdentifier)
-    }
-    
-    // MARK: - API
-    func fetchUser() {
-        UserService.fetchUser { (User) in
-            self.user = User
-            self.navigationItem.title = self.user?.username
-        }
     }
 }
  
@@ -55,9 +54,7 @@ extension ProfileController {
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerIdentifier, for: indexPath) as! ProfileHeader
         
-        if let user = user {
-            header.viewModel = ProfileHeaderViewModel(user: user)
-        }
+        header.viewModel = ProfileHeaderViewModel(user: user)
         
         return header
     }

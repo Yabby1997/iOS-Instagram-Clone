@@ -8,9 +8,14 @@
 import UIKit
 import Firebase
 
+protocol AuthenticationDelegate: class {
+    func authenticationDidComplete()
+}
+
 class LoginController: UIViewController, FormViewModel {
     // MARK: - Properties
     private var viewModel = LoginViewModel()
+    weak var delegate: AuthenticationDelegate?
     
     private let iconImage: UIImageView = {
         let imageView = UIImageView(image: #imageLiteral(resourceName: "Instagram_logo_white"))
@@ -98,6 +103,7 @@ class LoginController: UIViewController, FormViewModel {
     // MARK: - Actions
     @objc func handleShowSignUp() {
         let controller = RegistrationController()
+        controller.delegate = self.delegate
         navigationController?.pushViewController(controller, animated: true)
     }
     
@@ -118,8 +124,8 @@ class LoginController: UIViewController, FormViewModel {
                 print("DEBUG: Failed log user in. \(error.localizedDescription)")
                 return
             }
-            
-            self.dismiss(animated: true, completion: nil)
+
+            self.delegate?.authenticationDidComplete()
         }
     }
     
