@@ -11,11 +11,15 @@ class ProfileController: UICollectionViewController {
     // MARK: - Properties
     private let cellIdentifier = "profileCell"
     private let headerIdentifier = "profileHeader"
+    var user: User? {
+        didSet { navigationItem.title = user?.username }
+    }
     
     // MARK: - View Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCollectionView()
+        fetchUser()
     }
     
     // MARK: - Helpers
@@ -25,8 +29,13 @@ class ProfileController: UICollectionViewController {
         collectionView.register(ProfileHeader.self,
                                 forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
                                 withReuseIdentifier: headerIdentifier)
-        
-        
+    }
+    
+    // MARK: - API
+    func fetchUser() {
+        UserService.fetchUser { (User) in
+            self.user = User
+        }
     }
 }
  
