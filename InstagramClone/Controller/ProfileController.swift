@@ -12,7 +12,7 @@ class ProfileController: UICollectionViewController {
     private let cellIdentifier = "profileCell"
     private let headerIdentifier = "profileHeader"
     var user: User? {
-        didSet { navigationItem.title = user?.username }
+        didSet { collectionView.reloadData() }
     }
     
     // MARK: - View Methods
@@ -35,6 +35,7 @@ class ProfileController: UICollectionViewController {
     func fetchUser() {
         UserService.fetchUser { (User) in
             self.user = User
+            self.navigationItem.title = self.user?.username
         }
     }
 }
@@ -53,6 +54,10 @@ extension ProfileController {
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerIdentifier, for: indexPath) as! ProfileHeader
+        
+        if let user = user {
+            header.viewModel = ProfileHeaderViewModel(user: user)
+        }
         
         return header
     }
