@@ -9,11 +9,8 @@ import UIKit
 
 class UserCell: UITableViewCell {
     // MARK: - Properties
-    var user: User? {
-        didSet {
-            usernameLabel.text = user?.username
-            fullnameLabel.text = user?.fullname
-        }
+    var viewModel: UserCellViewModel? {
+        didSet { configure() }
     }
     
     private let profileImageView: UIImageView = {
@@ -64,5 +61,12 @@ class UserCell: UITableViewCell {
         addSubview(stack)
         
         stack.centerY(inView: profileImageView, leftAnchor: profileImageView.rightAnchor, paddingLeft: 8)
+    }
+    
+    func configure() {
+        guard let viewModel = viewModel else { return }
+        profileImageView.sd_setImage(with: viewModel.profileImageURL, completed: nil)
+        usernameLabel.text = viewModel.username
+        fullnameLabel.text = viewModel.fullname
     }
 }
