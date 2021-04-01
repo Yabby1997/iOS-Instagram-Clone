@@ -24,4 +24,15 @@ struct UserService {
             completion(users)
         }
     }
+    
+    static func follow(uid: String, completion: @escaping (Error?) -> Void) {
+        guard let currentUserUID = Auth.auth().currentUser?.uid else { return }
+        COLLECTION_FOLLOWING.document(currentUserUID).collection("following").document(uid).setData([:]) { (error) in
+            COLLECTION_FOLLOWERS.document(uid).collection("followers").document(currentUserUID).setData([:], completion: completion)
+        }
+    }
+    
+    static func unfollow(uid: String, completion: @escaping (Error?) -> Void) {
+        
+    }
 }
