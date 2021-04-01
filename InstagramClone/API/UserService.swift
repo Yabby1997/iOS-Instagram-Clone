@@ -33,6 +33,9 @@ struct UserService {
     }
     
     static func unfollow(uid: String, completion: @escaping (Error?) -> Void) {
-        
+        guard let currentUserUID = Auth.auth().currentUser?.uid else { return }
+        COLLECTION_FOLLOWING.document(currentUserUID).collection("following").document(uid).delete { (error) in
+            COLLECTION_FOLLOWERS.document(uid).collection("followers").document(currentUserUID).delete(completion: completion)
+        }
     }
 }
