@@ -42,7 +42,6 @@ class ProfileController: UICollectionViewController {
         UserService.fetchUserStats(uid: self.user.uid) { (UserStats) in
             self.user.stats = UserStats
             self.collectionView.reloadData()
-            print(UserStats)
         }
     }
     
@@ -111,11 +110,17 @@ extension ProfileController: ProfileHeaderDelegate {
         } else if user.isFollowed {
             UserService.unfollow(uid: user.uid) { (errir) in
                 self.user.isFollowed = false
+                UserService.fetchUserStats(uid: user.uid, completion: { (UserStats) in
+                    profileHeader.viewModel?.user.stats = UserStats
+                })
                 self.collectionView.reloadData()
             }
         } else {
             UserService.follow(uid: user.uid) { (error) in
                 self.user.isFollowed = true
+                UserService.fetchUserStats(uid: user.uid, completion: { (UserStats) in
+                    profileHeader.viewModel?.user.stats = UserStats
+                })
                 self.collectionView.reloadData()
             }
         }
