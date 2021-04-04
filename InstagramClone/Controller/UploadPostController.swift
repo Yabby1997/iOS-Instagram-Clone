@@ -17,9 +17,10 @@ class UploadPostController: UIViewController {
         return imageView
     }()
     
-    private let captionTextView: UITextView = {
-        let textView = UITextView()
-        
+    private let captionTextView: InputTextView = {
+        let textView = InputTextView()
+        textView.placeholderText = "Enter caption.."
+        textView.font = UIFont.systemFont(ofSize: 16)
         return textView
     }()
     
@@ -41,6 +42,8 @@ class UploadPostController: UIViewController {
     // MARK: - Helpers
     func configureUI() {
         view.backgroundColor = .white
+        captionTextView.delegate = self
+        
         navigationItem.title = "Upload Post"
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel,
                                                            target: self,
@@ -71,6 +74,12 @@ class UploadPostController: UIViewController {
                                    paddingRight: 12)
     }
     
+    func checkMaxLength(_ textView: UITextView) {
+        if textView.text.count > 100 {
+            textView.deleteBackward()
+        }
+    }
+    
     // MARK: - Actions
     @objc func didTapCancel() {
         print("DEBUG : Cancel tapped")
@@ -80,5 +89,14 @@ class UploadPostController: UIViewController {
     @objc func didTapShare() {
         print("DEBUG : Share tapped")
         dismiss(animated: true, completion: nil)
+    }
+}
+
+// MARK: - captionTextView Delegate Methods
+extension UploadPostController: UITextViewDelegate {
+    func textViewDidChange(_ textView: UITextView) {
+        let count = textView.text.count
+        checkMaxLength(textView)
+        characterCountLabel.text = "\(count) / 100"
     }
 }
