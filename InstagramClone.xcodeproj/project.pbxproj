@@ -23,6 +23,8 @@
 		1D6ED52E2601E2F700CE7266 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6ED52D2601E2F700CE7266 /* RegistrationController.swift */; };
 		1D6ED5312601EF5F00CE7266 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6ED5302601EF5F00CE7266 /* CustomTextField.swift */; };
 		1D6ED534260231D100CE7266 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6ED533260231D100CE7266 /* AuthenticationViewModel.swift */; };
+		1D86B24126195927006F753F /* UploadPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D86B24026195927006F753F /* UploadPostController.swift */; };
+		1D86B24426196024006F753F /* InputTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D86B24326196024006F753F /* InputTextView.swift */; };
 		1D8B68C12601B74300EF6F8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8B68C02601B74300EF6F8F /* AppDelegate.swift */; };
 		1D8B68C32601B74300EF6F8F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8B68C22601B74300EF6F8F /* SceneDelegate.swift */; };
 		1D8B68C52601B74300EF6F8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8B68C42601B74300EF6F8F /* ViewController.swift */; };
@@ -57,6 +59,8 @@
 		1D6ED52D2601E2F700CE7266 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		1D6ED5302601EF5F00CE7266 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		1D6ED533260231D100CE7266 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		1D86B24026195927006F753F /* UploadPostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostController.swift; sourceTree = "<group>"; };
+		1D86B24326196024006F753F /* InputTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextView.swift; sourceTree = "<group>"; };
 		1D8B68BD2601B74300EF6F8F /* InstagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D8B68C02601B74300EF6F8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D8B68C22601B74300EF6F8F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +111,7 @@
 				1D6ED5182601BC5100CE7266 /* NotificationsController.swift */,
 				1D6ED51B2601BC5E00CE7266 /* ImageSelectorController.swift */,
 				1D6ED51E2601BC6B00CE7266 /* ProfileController.swift */,
+				1D86B24026195927006F753F /* UploadPostController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -144,7 +149,6 @@
 			isa = PBXGroup;
 			children = (
 				1D6877D7260AEABE008DD218 /* ImageUploader.swift */,
-				1D6877DA260AEAC6008DD218 /* AuthService.swift */,
 				1D9DC8912610A82000A3870B /* UserService.swift */,
 			);
 			path = API;
@@ -153,8 +157,10 @@
 		1D6ED50D2601B86500CE7266 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				1D6877DA260AEAC6008DD218 /* AuthService.swift */,
 				1D6ED5252601CAE000CE7266 /* Extensions.swift */,
 				1D9DC8942610A8A100A3870B /* Constants.swift */,
+				1D86B24326196024006F753F /* InputTextView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -341,6 +347,7 @@
 			files = (
 				1D6ED5312601EF5F00CE7266 /* CustomTextField.swift in Sources */,
 				1D6877E2260C5ADB008DD218 /* ProfileHeader.swift in Sources */,
+				1D86B24126195927006F753F /* UploadPostController.swift in Sources */,
 				1D6ED51C2601BC5E00CE7266 /* ImageSelectorController.swift in Sources */,
 				1D6ED52A2601E2F000CE7266 /* LoginController.swift in Sources */,
 				1D6ED5232601C9AA00CE7266 /* FeedCell.swift in Sources */,
@@ -353,6 +360,7 @@
 				1D9DC89E2611977300A3870B /* UserCell.swift in Sources */,
 				1D6ED51F2601BC6B00CE7266 /* ProfileController.swift in Sources */,
 				1D9DC89B261168D100A3870B /* ProfileHeaderViewModel.swift in Sources */,
+				1D86B24426196024006F753F /* InputTextView.swift in Sources */,
 				1D9DC8952610A8A100A3870B /* Constants.swift in Sources */,
 				1D6ED5132601BC3800CE7266 /* FeedController.swift in Sources */,
 				1D9DC8A22612E22A00A3870B /* UserCellViewModel.swift in Sources */,

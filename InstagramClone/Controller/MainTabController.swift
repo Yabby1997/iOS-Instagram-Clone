@@ -72,9 +72,13 @@ class MainTabController: UITabBarController {
     
     func didFinishPickingMedia(_ picker: YPImagePicker) {
         picker.didFinishPicking { (items, Bool) in
-            picker.dismiss(animated: true) {
+            picker.dismiss(animated: false) {
                 guard let selectedImage = items.singlePhoto?.image else { return }
-                print("DEBUG : Selected image is \(selectedImage)")
+                
+                let controller = UploadPostController()
+                let navigationController = UINavigationController(rootViewController: controller)
+                navigationController.modalPresentationStyle = .fullScreen
+                self.present(navigationController, animated: false, completion: nil)
             }
         }
     }
@@ -96,6 +100,7 @@ extension MainTabController: UITabBarControllerDelegate {
             var config = YPImagePickerConfiguration()
             config.library.mediaType = .photo
             config.shouldSaveNewPicturesToAlbum = true
+            config.albumName = "Instagram Clone"
             config.startOnScreen = .library
             config.screens = [.library]
             config.hidesStatusBar = false
