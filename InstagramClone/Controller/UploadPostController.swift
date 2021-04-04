@@ -7,13 +7,24 @@
 
 import UIKit
 
+protocol UploadPostControllerDelegate: class {
+    func controllerDidFinishUploadPost(_ controller: UploadPostController)
+}
+
 class UploadPostController: UIViewController {
     // MARK: - Properties
+    weak var delegate: UploadPostControllerDelegate?
+    
+    var selectedImage: UIImage? {
+        didSet {
+            photoImageView.image = selectedImage
+        }
+    }
+    
     private let photoImageView: UIImageView = {
        let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
-        imageView.image = #imageLiteral(resourceName: "venom-7")
         return imageView
     }()
     
@@ -43,7 +54,7 @@ class UploadPostController: UIViewController {
     func configureUI() {
         view.backgroundColor = .white
         captionTextView.delegate = self
-        
+         
         navigationItem.title = "Upload Post"
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel,
                                                            target: self,
@@ -87,8 +98,18 @@ class UploadPostController: UIViewController {
     }
     
     @objc func didTapShare() {
-        print("DEBUG : Share tapped")
-        dismiss(animated: true, completion: nil)
+        guard let image = selectedImage else { return }
+        guard let caption = captionTextView.text else { return }
+        
+        PostService.uploadPost(caption: caption, image: image) { (error) in
+            if let error = error {
+                print("DEBUG: Failed to upload post with error \(error.localizedDescription)")
+                self.dismiss(animated: true, completion: nil)
+                return
+            }
+        }
+        
+        self.delegate?.controllerDidFinishUploadPost(self)
     }
 }
 

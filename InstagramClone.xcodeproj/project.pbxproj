@@ -38,6 +38,7 @@
 		1D9DC89E2611977300A3870B /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9DC89D2611977300A3870B /* UserCell.swift */; };
 		1D9DC8A22612E22A00A3870B /* UserCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9DC8A12612E22A00A3870B /* UserCellViewModel.swift */; };
 		1DB90D4B260ADF28006F4CA1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DB90D4A260ADF28006F4CA1 /* GoogleService-Info.plist */; };
+		1DE377212619E88600AC6104 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE377202619E88600AC6104 /* PostService.swift */; };
 		67B388782B478547D94C44F5 /* Pods_InstagramClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E44A147E134F7A1CF060F5D /* Pods_InstagramClone.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,7 @@
 		1D9DC89D2611977300A3870B /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		1D9DC8A12612E22A00A3870B /* UserCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellViewModel.swift; sourceTree = "<group>"; };
 		1DB90D4A260ADF28006F4CA1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1DE377202619E88600AC6104 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		2E44A147E134F7A1CF060F5D /* Pods_InstagramClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstagramClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E4445F1BAAF832C8D2C6D50 /* Pods-InstagramClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramClone.debug.xcconfig"; path = "Target Support Files/Pods-InstagramClone/Pods-InstagramClone.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,6 +152,7 @@
 			children = (
 				1D6877D7260AEABE008DD218 /* ImageUploader.swift */,
 				1D9DC8912610A82000A3870B /* UserService.swift */,
+				1DE377202619E88600AC6104 /* PostService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				1D6ED5262601CAE000CE7266 /* Extensions.swift in Sources */,
 				1D6877D8260AEABE008DD218 /* ImageUploader.swift in Sources */,
 				1D6877DB260AEAC6008DD218 /* AuthService.swift in Sources */,
+				1DE377212619E88600AC6104 /* PostService.swift in Sources */,
 				1D9DC8922610A82000A3870B /* UserService.swift in Sources */,
 				1D6877DF260C5AB2008DD218 /* ProfileCell.swift in Sources */,
 				1D8B68C32601B74300EF6F8F /* SceneDelegate.swift in Sources */,
