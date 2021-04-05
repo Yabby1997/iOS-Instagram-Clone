@@ -103,7 +103,7 @@ class UploadPostController: UIViewController {
         guard let caption = captionTextView.text else { return }
         guard let currentUser = currentUser else { return }
         
-        showLoader(true)
+        self.showLoader(true)
         PostService.uploadPost(caption: caption, image: image, user: currentUser) { (error) in
             self.showLoader(false)
             if let error = error {
@@ -111,9 +111,8 @@ class UploadPostController: UIViewController {
                 self.dismiss(animated: true, completion: nil)
                 return
             }
+            self.delegate?.controllerDidFinishUploadPost(self)
         }
-        
-        self.delegate?.controllerDidFinishUploadPost(self)
     }
 }
 
