@@ -23,6 +23,7 @@
 		1D6ED52E2601E2F700CE7266 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6ED52D2601E2F700CE7266 /* RegistrationController.swift */; };
 		1D6ED5312601EF5F00CE7266 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6ED5302601EF5F00CE7266 /* CustomTextField.swift */; };
 		1D6ED534260231D100CE7266 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6ED533260231D100CE7266 /* AuthenticationViewModel.swift */; };
+		1D7AEF04261A9FE1006EEEB9 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7AEF03261A9FE1006EEEB9 /* Post.swift */; };
 		1D86B24126195927006F753F /* UploadPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D86B24026195927006F753F /* UploadPostController.swift */; };
 		1D86B24426196024006F753F /* InputTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D86B24326196024006F753F /* InputTextView.swift */; };
 		1D8B68C12601B74300EF6F8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8B68C02601B74300EF6F8F /* AppDelegate.swift */; };
@@ -60,6 +61,7 @@
 		1D6ED52D2601E2F700CE7266 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		1D6ED5302601EF5F00CE7266 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		1D6ED533260231D100CE7266 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		1D7AEF03261A9FE1006EEEB9 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		1D86B24026195927006F753F /* UploadPostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostController.swift; sourceTree = "<group>"; };
 		1D86B24326196024006F753F /* InputTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextView.swift; sourceTree = "<group>"; };
 		1D8B68BD2601B74300EF6F8F /* InstagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				1D9DC897261160BC00A3870B /* User.swift */,
+				1D7AEF03261A9FE1006EEEB9 /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				1D6ED5102601B98300CE7266 /* MainTabController.swift in Sources */,
 				1D6ED5262601CAE000CE7266 /* Extensions.swift in Sources */,
 				1D6877D8260AEABE008DD218 /* ImageUploader.swift in Sources */,
+				1D7AEF04261A9FE1006EEEB9 /* Post.swift in Sources */,
 				1D6877DB260AEAC6008DD218 /* AuthService.swift in Sources */,
 				1DE377212619E88600AC6104 /* PostService.swift in Sources */,
 				1D9DC8922610A82000A3870B /* UserService.swift in Sources */,
