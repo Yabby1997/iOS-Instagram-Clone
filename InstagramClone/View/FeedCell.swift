@@ -9,6 +9,12 @@ import UIKit
 
 class FeedCell: UICollectionViewCell {
     // MARK: - Properties
+    var viewModel: PostViewModel? {
+        didSet {
+            configure()
+        }
+    }
+    
     private let profileImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
@@ -41,7 +47,6 @@ class FeedCell: UICollectionViewCell {
     
     private let likesLabel: UILabel = {
         let label = UILabel()
-        label.text = "1 like"
         label.font = UIFont.boldSystemFont(ofSize: 13)
         return label
     }()
@@ -69,7 +74,6 @@ class FeedCell: UICollectionViewCell {
     
     private let captionLabel: UILabel = {
         let label = UILabel()
-        label.text = "Some text caption for now.."
         label.font = UIFont.boldSystemFont(ofSize: 14)
         return label
     }()
@@ -118,6 +122,13 @@ class FeedCell: UICollectionViewCell {
     }
     
     // MARK: - Helpers
+    func configure() {
+        guard let viewModel = viewModel else { return }
+        postImageView.sd_setImage(with: viewModel.imageURL)
+        captionLabel.text = viewModel.caption
+        likesLabel.text = "\(viewModel.likes) like"
+    }
+    
     func configureActionButtons() {
         let stackView: UIStackView = UIStackView(arrangedSubviews: [likeButton, commentButton, shareButton])
         stackView.axis = .horizontal

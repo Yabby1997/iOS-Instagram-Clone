@@ -24,6 +24,7 @@
 		1D6ED5312601EF5F00CE7266 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6ED5302601EF5F00CE7266 /* CustomTextField.swift */; };
 		1D6ED534260231D100CE7266 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6ED533260231D100CE7266 /* AuthenticationViewModel.swift */; };
 		1D7AEF04261A9FE1006EEEB9 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7AEF03261A9FE1006EEEB9 /* Post.swift */; };
+		1D7AEF07261AAAD5006EEEB9 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7AEF06261AAAD5006EEEB9 /* PostViewModel.swift */; };
 		1D86B24126195927006F753F /* UploadPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D86B24026195927006F753F /* UploadPostController.swift */; };
 		1D86B24426196024006F753F /* InputTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D86B24326196024006F753F /* InputTextView.swift */; };
 		1D8B68C12601B74300EF6F8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8B68C02601B74300EF6F8F /* AppDelegate.swift */; };
@@ -62,6 +63,7 @@
 		1D6ED5302601EF5F00CE7266 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		1D6ED533260231D100CE7266 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		1D7AEF03261A9FE1006EEEB9 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		1D7AEF06261AAAD5006EEEB9 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 		1D86B24026195927006F753F /* UploadPostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostController.swift; sourceTree = "<group>"; };
 		1D86B24326196024006F753F /* InputTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextView.swift; sourceTree = "<group>"; };
 		1D8B68BD2601B74300EF6F8F /* InstagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +128,7 @@
 				1D6ED533260231D100CE7266 /* AuthenticationViewModel.swift */,
 				1D9DC89A261168D100A3870B /* ProfileHeaderViewModel.swift */,
 				1D9DC8A12612E22A00A3870B /* UserCellViewModel.swift */,
+				1D7AEF06261AAAD5006EEEB9 /* PostViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D7AEF07261AAAD5006EEEB9 /* PostViewModel.swift in Sources */,
 				1D6ED5312601EF5F00CE7266 /* CustomTextField.swift in Sources */,
 				1D6877E2260C5ADB008DD218 /* ProfileHeader.swift in Sources */,
 				1D86B24126195927006F753F /* UploadPostController.swift in Sources */,
