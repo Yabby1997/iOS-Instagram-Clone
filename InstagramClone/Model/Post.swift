@@ -14,6 +14,8 @@ struct Post {
     let caption: String
     let ownerUID: String
     let likes: Int
+    let ownerUsername: String
+    let ownerImageURL: String
     
     init(postID: String, dictionary: [String: Any]) {
         self.postID = postID
@@ -22,5 +24,7 @@ struct Post {
         self.caption = dictionary["caption"] as? String ?? ""
         self.ownerUID = dictionary["ownerUID"] as? String ?? ""
         self.likes = dictionary["likes"] as? Int ?? 0
+        self.ownerUsername = dictionary["ownerUsername"] as? String ?? ""
+        self.ownerImageURL = dictionary["ownerImageURL"] as? String ?? ""
     }
 }
