@@ -151,6 +151,7 @@ class ProfileHeader: UICollectionReusableView {
         postsLabel.attributedText = viewModel.numberOfPosts
         followersLabel.attributedText = viewModel.numberOfFollowers
         followingLabel.attributedText = viewModel.numberOfFollowing
+        postsLabel.attributedText = viewModel.numberOfPosts
     }
     
     // MARK: - Actions

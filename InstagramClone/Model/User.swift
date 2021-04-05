@@ -19,7 +19,7 @@ struct User {
     // MARK: - Properties from Local App
     var isFollowed = false
     var isCurrentUser: Bool { return Auth.auth().currentUser?.uid == uid }
-    var stats: UserStats = UserStats(followers: 0, following: 0)
+    var stats: UserStats = UserStats(followers: 0, following: 0, posts: 0)
     
     init(dictionary: [String: Any]) {
         self.email = dictionary["email"] as?  String ?? ""
@@ -33,5 +33,5 @@ struct User {
 struct UserStats {
     let followers: Int
     let following: Int
-//    let posts: Int
+    let posts: Int
 }

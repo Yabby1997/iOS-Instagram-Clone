@@ -6,12 +6,18 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ProfileCell: UICollectionViewCell {
     // MARK: - Properties
+    var viewModel: PostViewModel? {
+        didSet {
+            configure()
+        }
+    }
+    
     private let postImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = #imageLiteral(resourceName: "venom-7")
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         return imageView
@@ -32,5 +38,10 @@ class ProfileCell: UICollectionViewCell {
     func configureViewController() {
         addSubview(postImageView)
         postImageView.fillSuperview()
+    }
+    
+    func configure() {
+        guard let viewModel = self.viewModel else { return }
+        postImageView.sd_setImage(with: viewModel.imageURL, completed: nil)
     }
 }
