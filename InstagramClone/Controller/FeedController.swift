@@ -36,9 +36,22 @@ class FeedController: UICollectionViewController {
         collectionView.register(FeedCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
+        
+        let refresher = UIRefreshControl()
+        refresher.addTarget(self, action: #selector(handleRefresh), for: .valueChanged)
+        collectionView.refreshControl = refresher
     }
     
     // MARK: - Actions
+    @objc func handleRefresh() {
+        PostService.fetchPosts { (posts) in
+            self.posts.removeAll()
+            self.posts = posts
+            self.collectionView.reloadData()
+        }
+        self.collectionView.refreshControl?.endRefreshing()
+    }
+    
     @objc func handleLogout() {
         do {
             try Auth.auth().signOut()
