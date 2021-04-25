@@ -37,4 +37,5 @@ struct PostViewModel {
     init(post: Post) {
         self.post = post
     }
+
 }
