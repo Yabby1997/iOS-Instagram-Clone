@@ -13,6 +13,8 @@ class CommentCell: UICollectionViewCell {
     // MARK: - Lifecycles
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        print("???????")
     }
     
     required init?(coder: NSCoder) {

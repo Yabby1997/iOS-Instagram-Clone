@@ -9,16 +9,21 @@ import UIKit
 
 class CommentController: UICollectionViewController {
     // MARK: - Properties
-    let reuseIdentifier = "cell"
+    let reuseIdentifier = "CommentCell"
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        configureCollectionView()
     }
     
     // MARK: - Helper
     func configureCollectionView() {
+        navigationItem.title = "Comments"
+        
         collectionView.register(CommentCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        collectionView.backgroundColor = .white
     }
 }
 
@@ -30,6 +35,8 @@ extension CommentController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        cell.backgroundColor = .red
+        
         return cell
     }
 }
